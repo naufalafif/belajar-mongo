@@ -1,6 +1,6 @@
 # belajarMongo
 
-Resume Hasil Belajar NodeJS (Pribadi). biar gk lupa 😎
+📝 Resume Hasil Belajar NodeJS (Pribadi). biar gk lupa 😎
 
 ## Sedikit Catatan
 
@@ -14,8 +14,6 @@ MongoDB menyimpan data benbentuk **JSON** ke dalam storage dengan bentuk **BSON*
 
 Penulisan perintah dalam repo ini menggunakan beberapa tanda yang ditampilkan hanya sebagai pendukung untuk memudahkan pembaca. tanda yang digunakan adalah > dan $. kedua tanda tersebut tidak perlu di copy
 
-
-
 ### Instalasi
 
 Silahkan lihat tahap2 di [link](https://docs.mongodb.com/manual/installation/) ini
@@ -25,8 +23,6 @@ ketika MongoDB terinstall, akan ada beberapa program mongo yang dapat dieksekusi
 **mongo** adalah database client dari MongoDB. program ini digunakan untuk melakukan operasi terhadap database, collection dll. simpelnya, disini kita melakukan querynya
 
 **mongod** adalah program untuk menjalankan mongodb itu sendiri. program mongo tidak akan bisa dijalankan jika tidak ada service mongoDB yang berjalan.
-
-
 
 ### Menjalankan
 
@@ -63,8 +59,6 @@ $ mongo
 ```
 
 pastikan mongod telah berjalan
-
-
 
 ### Perintah & Query
 
@@ -180,11 +174,11 @@ perintah diatas akan menghasilkan respon kurang lebih seperti dibawah
 
 ```
 {
-	"acknowledged" : true,
-	"insertedIds" : [
-		ObjectId("5d59e39df0650355d96637c0"),
-		ObjectId("5d59e39df0650355d96637c1")
-	]
+    "acknowledged" : true,
+    "insertedIds" : [
+        ObjectId("5d59e39df0650355d96637c0"),
+        ObjectId("5d59e39df0650355d96637c1")
+    ]
 }
 ```
 
@@ -200,15 +194,13 @@ respon yang dihasilkan oleh perintah insert berbeda dengan insertOne dan insertM
 
 ```
 BulkWriteResult({
-	"writeErrors" : [ ],
-	"writeConcernErrors" : [ ],
-	"nInserted" : 2,
-	"nUpserted" : 0,
-	"nMatched" : 0,
-	"nModified" : 0,
-	"nRemoved" : 0,
-	"upserted" : [ ]
+    "writeErrors" : [ ],
+    "writeConcernErrors" : [ ],
+    "nInserted" : 2,
+    "nUpserted" : 0,
+    "nMatched" : 0,
+    "nModified" : 0,
+    "nRemoved" : 0,
+    "upserted" : [ ]
 })
 ```
-
-
