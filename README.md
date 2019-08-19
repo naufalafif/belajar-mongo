@@ -302,3 +302,14 @@ untuk menghapus berdasarkan _id dokumen, diperlukan sedikit tambahan yaitu seper
 ```
 seperti pada contoh diatas, diperlukan bagi pengguna untuk menambahkan ObjectId pada _id dari dokumen
 
+##### Kursor / Cursor
+Coming Soon
+
+##### - / Embedded Document
+Coming Soon
+
+##### Operator
+Coming Soon
+
+##### Skema / Schema
+Coming Soon
