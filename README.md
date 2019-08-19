@@ -204,3 +204,72 @@ BulkWriteResult({
     "upserted" : [ ]
 })
 ```
+
+##### Membaca Dokumen
+
+untuk membaca dokumen, kita bisa menggunakan 2 cara yaitu
+
+**find**
+
+find adalah perintah standar untuk menampilkan dokumen. find akan mengembalikan response dalam bentuk list/array
+
+- Menampilkan Semua Data
+  
+  ```
+  > db.namaCollection.find() 
+  atau 
+  > db.namaCollection.find({})
+  ```
+
+- Menampilkan Data dengan Query
+  ```
+  > db.namaCollection.find({nama: "budi"})
+  ```
+  perintah diatas digunakan untuk menampilkan semua dokumen yang memiliki attibut nama dengan value budi
+
+
+**findOne**
+
+find digunakan untuk menampilkan 1 dokumen. apabila terdapat lebih dari satu dokumen yang sama, maka findOne akan mengembalikan hasil pertama
+
+ ```
+  > db.namaCollection.findOne() 
+  atau
+  > db.namaCollection.findOne({nama: "budi"}) // dengan query
+  ```
+  
+##### Mengubah Dokumen
+untuk mengubah dokumen, kita bisa menggunakan 3 cara yaitu updateOne, updateMany dan update.
+semua perintah tersebut membutuhkan minimal 2 argument/parameter yaitu :
+- query untuk menentukan yang akan diubah
+- data baru untuk menggantikan data lama
+
+**updateOne**
+
+updateOne digunakan untuk mengupdate 1 dokumen. 
+```
+> db.namaCollection.updateOne({query}, {$set: dataBaru})
+contoh
+> db.namaCollection.updateOne({nama: "budi"}, {$set: {nama: "andi"}})
+```
+contoh perintah diatas jika eksekusi maka akan mengubah 1 data pertama yang memiliki `nama` budi, dan mengubah `nama` menjadi andi
+
+**updateMany**
+
+updateMany digunakan untuk mengupdate semua dokumen yang sesuai dengan query. 
+```
+> db.namaCollection.updateMany({nama: "budi"}, {$set: {nama: "andi"}})
+```
+contoh perintah diatas jika eksekusi maka akan mengubah semua data yang memiliki `nama` budi, dan mengubah `nama` menjadi andi
+
+**updateMany**
+
+updateMany digunakan untuk mengupdate semua dokumen yang sesuai dengan query. 
+```
+> db.namaCollection.updateMany({nama: "budi"}, {$set: {nama: "andi"}})
+```
+contoh perintah diatas jika eksekusi maka akan mengubah semua data yang memiliki `nama` budi, dan mengubah `nama` menjadi andi
+
+
+
+
