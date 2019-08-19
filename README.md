@@ -262,14 +262,43 @@ updateMany digunakan untuk mengupdate semua dokumen yang sesuai dengan query.
 ```
 contoh perintah diatas jika eksekusi maka akan mengubah semua data yang memiliki `nama` budi, dan mengubah `nama` menjadi andi
 
-**updateMany**
+**update**
 
-updateMany digunakan untuk mengupdate semua dokumen yang sesuai dengan query. 
+update digunakan untuk mengupdate dokumen yang sesuai dengan query. perintah update dapat mengupdate satu maupun banyak dokumen. update juga dapat digunakan untuk melakukan operasi replace. untuk melakukan operasi update, diperlukan 3 parameter/argumen yaitu
+- `query` untuk mengfilter dokumen mana yang perlu diubah
+- `databaru` sebagai data untuk mengganti data lama
+- `options` untuk menentukan operasi mana yang ingin dilakukan terhadap dokumen
 ```
-> db.namaCollection.updateMany({nama: "budi"}, {$set: {nama: "andi"}})
+> db.namaCollection.update() !! COMING SOON
 ```
-contoh perintah diatas jika eksekusi maka akan mengubah semua data yang memiliki `nama` budi, dan mengubah `nama` menjadi andi
 
+##### Menghapus Dokumen
+untuk menghapus dokumen, kita bisa menggunakan 2 cara yaitu deleteOne, deleteMany.
 
+**deleteOne**
+deleteOne digunakan untuk menghapus 1 dokumen. 
+```
+> db.namaCollection.deleteOne({query})
+contoh
+> db.namaCollection.deleteOne({nama: "budi"})
+```
+perintah diatas akan menghapus 1 dokumen yang memiliki attribut `nama` dengan `value` budi.
 
+**deleteMany**
+deleteMany digunakan untuk menghapus beberapa/banyak dokumen. 
+```
+> db.namaCollection.deleteMany({query})
+contoh
+> db.namaCollection.deleteMany({nama: "budi"})
+```
+perintah diatas akan menghapus semua dokumen yang memiliki attribut `nama` dengan `value` budi.
+
+**Tambahan**
+
+untuk menghapus berdasarkan _id dokumen, diperlukan sedikit tambahan yaitu seperti berikut
+
+```
+>  db.namaCollection.deleteMany({ _id: ObjectId(_idDariDokumen)})
+```
+seperti pada contoh diatas, diperlukan bagi pengguna untuk menambahkan ObjectId pada _id dari dokumen
 
