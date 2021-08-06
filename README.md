@@ -1,6 +1,6 @@
 # belajarMongo
 
-📝 Resume Hasil Belajar NodeJS (Pribadi). biar gk lupa 😎
+Resume Hasil Belajar NodeJS 
 
 ## Sedikit Catatan
 
