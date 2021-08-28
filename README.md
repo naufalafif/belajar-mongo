@@ -1,8 +1,4 @@
-# belajarMongo
-
-Resume Hasil Belajar NodeJS 
-
-## Sedikit Catatan
+# Belajar Mongo
 
 **MongoDB** adalah database yang berorientasi pada dokumen atau *document oriented database*. MongoDB disebut sebagai document oriented database karena cara kerja nya dalam menyimpan data. dalam MongoDB, data akan disimpan dalam sebuah collection, dimana setiap data tersebut disebut sebagai document.
 
